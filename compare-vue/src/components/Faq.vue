@@ -1,6 +1,6 @@
 <template>
   <div class="faq">
-    Home
+    Faq
   </div>
 </template>
 
