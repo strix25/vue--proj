@@ -6,13 +6,13 @@
           <a class="navbar-item">MyCompany</a>
         </div>
 
-        <span class="navbar-toggle">
+        <button class="button navbar-burger" v-on:click="toggleNav" v-bind:class="{ 'is-active': isActive }">
           <span></span>
           <span></span>
           <span></span>
-        </span>
+        </button>
 
-        <div class="navbar-end navbar-menu">
+        <div class="navbar-end navbar-menu" v-bind:class="{ 'is-active': isActive }">
           <router-link to ="/" class="navbar-item r-item">Home</router-link>
           <router-link to ="faq" class="navbar-item r-item">Features</router-link>
           <router-link to ="faq" class="navbar-item r-item">About</router-link>
@@ -33,25 +33,68 @@
       </div>
     </div>
     <router-view/>
+
+    <footer class="footer -is.primary">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p>And this right here is a spiffy footer, where you can put stuff.</p>
+          </div>
+          <div class="column has-text-right">
+            <a class="icon" href="#"><i class="fa fa-facebook"></i></a>
+            <a class="icon" href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data: function(){
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    toggleNav: function() {
+      this.isActive = !this.isActive;
+    }
+  }
 }
 </script>
 
 <style lang="sass">
 @import '../node_modules/bulma/bulma.sass'
-@import 'mq'
+@import 'mq.sass'
 
-#app 
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
-  margin-top: 60px
+.navbar
+  background-color: #383838
+  a:hover
+    color: gray
+
+.navbar-brand a
+  color:#fff
+  font-weight: bold
+
+a.r-item
+  color: #C1C1C1
+  padding: 0,5rem 1.75rem
++mobile
+    color: gray
+    &:hover
+      background-color: #F1F1F1
+.navbar-burger span
+  background-color: #C1C1C1
+
+footer 
+  background-color: $primary !important
+  color: #fff
+
+  .icon
+    color: #fff
+    margin-left: 20px
 
 </style>
