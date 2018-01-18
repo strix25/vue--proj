@@ -12,6 +12,49 @@
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns pd is-desktop">
+          <div class="column is-1 has-text-centered">
+            <i class="fa fa-cog is-primary"></i>
+          </div>
+          <div class="column is-one-third-desktop has-text-centered">
+            <p class="title"><strong>We provide superior logistics so that your business can secceed in a crazy world</strong></p>
+          </div>
+          <div class="column">
+            <p>We provide superior logistics so that your business can secceed in a crazy world</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns pd">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title">"I think it's an absolutely excellent tool for out business. I can't survive without this ting."</p>
+              <p class="subtitle">Damjan Oslaj</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title">"I think it's an absolutely excellent tool for out business. I can't survive without this ting."</p>
+              <p class="subtitle">Damjan Oslaj</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title">"I think it's an absolutely excellent tool for out business. I can't survive without this ting."</p>
+              <p class="subtitle">Damjan Oslaj</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -20,7 +63,7 @@ export default {
   name: 'home',
   data() {
     return {
-      heading: 'Soaromg to new heights',
+      heading: 'Soaring to new heights',
       subheading: 'Lorem ipsum dolor sit amet, consecterum adipsit elit, sed do eisumod tempor incididunt ut labore et dolore magna aliqua'
     }
   }
@@ -31,5 +74,29 @@ export default {
 <style lang="sass" scoped>
 @import '../mq'
 
+.hero
+  background: url('../assets/clouds.jpg')
+  background-size: cover
 
+  .title
+    +mobile
+      font-weight: bold
+    +tablet
+      font-size: 2.5rem
+    +desktop
+      font-size: 4rem
+      margin-top: 2.5rem
+h2
+  margin: 1.5rem 0 2rem 0 !important
+
+.fa-cog
+  font-size: 40px
+
+#learn 
+ +desktop
+  margin-bottom: 2rem
+
+.pd
+  +tablet
+    padding 2em 0
 </style>

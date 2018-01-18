@@ -1,6 +1,24 @@
 <template>
   <div class="faq">
-    Faq
+    <div class="container">
+      <section class="section">
+        <h1 class="title">faq</h1>
+        <h2 class="subtitle is-4">Lurm ipsum isf sdfm ioe damdo</h2>
+
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="card">
+              <div class="card-content">
+                <p class="title">My title</p>
+                <p class="answer">My answer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+    </div>
   </div>
 </template>
 
